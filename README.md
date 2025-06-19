@@ -5,7 +5,7 @@ This is the GitHub repository to host all the notes, diagrams, assignments, and 
 Note: If you found the content helpful, consider giving the repository a star ⭐
 
 ## 🅵🆁🅴🅴  LABS ⛳
-- KodeKloud Free Labs: https://kode.wiki/4d24Q9Z
+- Updated Topics based KodeKloud Free Labs: https://kode.wiki/4d24Q9Z
 - KodeKloud free playground: https://kodekloud.com/public-playgrounds
 
 **Checkout this [file](https://github.com/piyushsachdeva/CKA-2024/blob/main/%2340daysofkubernetes.md) for the #40daysofkubernetes challenge details**
