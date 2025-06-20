@@ -154,6 +154,32 @@ spec:
       port: 80
 ```
 
+### or create and apply using a single command:
+
+```yaml
+
+kubectl apply -f - <<EOF
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: frontend-route
+  namespace: default
+spec:
+  parentRefs:
+  - name: nginx-gateway
+    namespace: nginx-gateway
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: frontend-svc
+      port: 80
+EOF
+
+```
+
 Apply the configuration:
 
 ```bash
