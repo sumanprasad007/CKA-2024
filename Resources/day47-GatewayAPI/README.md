@@ -67,6 +67,17 @@ nginx-gateway  NodePort   10.96.188.84   <none>        80:30080/TCP,443:30081/TC
 
 ## Step 3: Create GatewayClass and Gateway Resources
 
+### Step 3.1: Create application and Service using below 
+
+```yaml
+
+kubectl run nginx --image=kodekloud/webapp-color --port=8080
+
+kubectl expose pod nginx --port=80 --target-port=8080 --type=NodePort
+kubectl patch svc nginx -p '{"spec": {"ports": [{"port": 80, "targetPort": 8080, "nodePort": 30080}], "type": "NodePort"}}'
+
+```
+
 Now, let's create the GatewayClass and Gateway resources. Save the following YAML to a file named `gateway-resources.yaml`:
 
 ```yaml
